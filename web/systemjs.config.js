@@ -26,7 +26,7 @@
             // other libraries
             rxjs: 'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-            'ng-sidebar': 'npm:ng-sidebar',
+			'ng-sidebar': 'npm:ng-sidebar',
             '@ng-bootstrap/ng-bootstrap': 'npm:@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js'
         },
         // packages tells the System loader how to load when no filename and/or no extension
@@ -39,6 +39,7 @@
             },
             '@ng-bootstrap/ng-bootstrap': {
                 defaultExtension: 'js'
+
             },
             'ng-sidebar': {
                 main: 'lib/index',
