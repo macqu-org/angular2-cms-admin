@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { SidebarModule } from 'ng-sidebar';
 
-import { AppComponent } from './app.component';//在根模块中导入根组件
+import { AppComponent } from './app.component';
 
 import { HomePageComponent } from './pages/home/home.component';
 import { AboutPageComponent } from './pages/about/about.component';
@@ -34,7 +34,6 @@ const appRoutes = [
     }
 ];
 
-//模块导入
 @NgModule({
     declarations: [AppComponent, HomePageComponent, AboutPageComponent],
     providers: [{ provide: APP_BASE_HREF, useValue: '/' }],

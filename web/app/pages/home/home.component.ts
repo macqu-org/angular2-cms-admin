@@ -5,4 +5,6 @@
     template: 'HomePage'
 })
 
-export class HomePageComponent { }
+export class HomePageComponent {
+
+}
