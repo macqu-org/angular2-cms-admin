@@ -34,7 +34,8 @@
             app: {
                 defaultExtension: 'js'
             },
-            rxjs: {
+            rxjs:{
+                main:'./Rx',
                 defaultExtension: 'js'
             },
             '@ng-bootstrap/ng-bootstrap': {
