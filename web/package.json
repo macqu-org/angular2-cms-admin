@@ -16,6 +16,7 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.20",
     "angular-in-memory-web-api": "~0.2.4",
     "bootstrap": "^4.0.0-alpha.6",
+    "lodash": "4.17.4",
     "core-js": "^2.4.1",
     "ng-sidebar": "^3.3.1",
     "rxjs": "5.0.1",
