@@ -6,8 +6,8 @@ import {BaThemeConfig} from "./theme/theme.config";
 import {BaThemePreloader} from "./theme/services/baThemePreloader.service";
 import {layoutPaths} from './theme/theme.constants';
 
-import 'style-loader!./app.scss';
-import 'style-loader!./theme/initial.scss';
+import './app.scss';
+import './theme/initial.scss';
 
 @Component({
     selector: 'app-root',

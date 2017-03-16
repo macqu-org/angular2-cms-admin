@@ -20,7 +20,6 @@
     "core-js": "^2.4.1",
     "ionicons": "2.0.1",
     "lodash": "4.17.4",
-    "ng-sidebar": "^3.3.1",
     "node-sass": "^4.5.0",
     "normalize.css": "4.2.0",
     "rxjs": "5.0.1",
@@ -28,8 +27,22 @@
     "zone.js": "^0.7.4"
   },
   "devDependencies": {
-    "typescript": "~2.0.10",
-    "style-loader": "0.13.1"
+    "jspm": "^0.16.53",
+    "style-loader": "0.13.1",
+    "typescript": "~2.0.10"
   },
-  "repository": {}
+  "scripts": {
+    "jspm": "jspm"
+  },
+  "repository": {},
+  "jspm": {
+    "dependencies": {
+      "sass": "github:dougludlow/plugin-sass@^0.6.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
 }
