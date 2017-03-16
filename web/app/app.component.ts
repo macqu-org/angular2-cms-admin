@@ -6,7 +6,6 @@ import {Subscription} from "rxjs";
 @Component({
     selector: 'app-root',
     templateUrl: './app/app.component.html',
-    styleUrls: ['./app/app.component.css'],
     providers: [HomeService]
 })
 export class AppComponent implements OnDestroy {
