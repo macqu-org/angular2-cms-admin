@@ -13,6 +13,8 @@
     "@angular/platform-browser": "~2.4.0",
     "@angular/platform-browser-dynamic": "~2.4.0",
     "@angular/router": "~3.4.0",
+    "@angularclass/hmr": "^1.2.2",
+    "@angularclass/hmr-loader": "^3.0.2",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.20",
     "angular-in-memory-web-api": "~0.2.4",
     "animate.css": "3.5.2",
@@ -20,29 +22,30 @@
     "core-js": "^2.4.1",
     "ionicons": "2.0.1",
     "lodash": "4.17.4",
-    "node-sass": "^4.5.0",
     "normalize.css": "4.2.0",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
     "zone.js": "^0.7.4"
   },
-  "devDependencies": {
-    "jspm": "^0.16.53",
-    "style-loader": "0.13.1",
-    "typescript": "~2.0.10"
-  },
   "scripts": {
-    "jspm": "jspm"
+    "webpack": "webpack"
   },
-  "repository": {},
-  "jspm": {
-    "dependencies": {
-      "sass": "github:dougludlow/plugin-sass@^0.6.0"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
-    }
-  }
+  "devDependencies": {
+    "typescript": "~2.0.10",
+    "webpack": "^2.2.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "extract-text-webpack-plugin": "2.0.0-rc.3",
+    "html-webpack-plugin": "^2.28.0",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.1.2",
+    "css-loader": "^0.27.3",
+    "file-loader": "^0.10.1",
+    "node-sass": "^4.5.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.14.1",
+    "ts-loader": "^2.0.2",
+    "url-loader": "^0.5.8"
+  },
+  "repository": {}
 }
