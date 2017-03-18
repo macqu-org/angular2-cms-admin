@@ -4,10 +4,6 @@
  */
 (function (global) {
     System.config({
-        meta: {
-            "*.scss": { "loader": "sass" },
-            "*.sass": { "loader": "sass" }
-        },
         baseURL: '/web',
         paths: {
             // paths serve as alias
