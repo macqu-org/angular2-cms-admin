@@ -7,7 +7,7 @@ module.exports = {
     entry: {
         'shim': path.resolve(__dirname, 'node_modules/core-js/client/shim.min.js'),
         'zone': path.resolve(__dirname, 'node_modules/zone.js/dist/zone.js'),
-        'main': path.resolve(__dirname, 'main.ts')
+        'main': path.resolve(__dirname, 'src/main.ts')
     },
     /*
      * Options affecting the resolving of modules.
@@ -44,13 +44,13 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
-                include: [path.resolve(__dirname, "")]
+                include: [path.resolve(__dirname, "src")]
             },
             // Support for .html as raw text
             {
                 test: /\.html$/,
                 loader: 'raw-loader',
-                include: [path.resolve(__dirname, "")]
+                include: [path.resolve(__dirname, "src")]
             }
         ]
     },
@@ -61,9 +61,9 @@ module.exports = {
      */
     plugins: [
         // Copy static assets to the build folder
-        new CopyWebpackPlugin([{from: './assets', to: 'assets'}]),
+        new CopyWebpackPlugin([{from: 'src/assets', to: 'assets'}]),
         // Generate the index.html
-        new HtmlWebpackPlugin({template: './index.html'})
+        new HtmlWebpackPlugin({template: 'src/index.html'})
     ]
 }
 ;
