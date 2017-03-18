@@ -1,18 +1,4 @@
-﻿<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>webpack终于ok了</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <a routeLink="home" routerLinkActive="">Home</a>
-            <a routeLink="about" routerLinkActive="">About</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
+﻿<main [ngClass]="{'menu-collapsed': isMenuCollapsed}" baThemeRun>
+    <div class="additional-bg"></div>
+    <router-outlet></router-outlet>
+</main>

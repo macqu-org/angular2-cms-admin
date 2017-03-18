@@ -8,6 +8,7 @@ webpack常见问题
 * [webpack1.x对比webpack2.x在配置文件中有哪些配置项发生了变化?](#webpack 1.x与2.x配置变化)
 * [webpack编译有错误，如何定位错误并排查错误？](#webpack编译错误排查)
 * [webpack工具对应的工具链](#webpack开发工具链)
+* [webpack打包后的资源如何调试](#webpack打包后调试)
 
 ## 为什么需要loader ##
 loader在webpack中绝对是顶梁柱的地位，loader负责处理各种资源静态资源的处理，css,html,ts各类文件的出来都有对应的loader。`                test: /\.ts$/,
@@ -44,5 +45,8 @@ webpack编译typescript时需要安装类型说明:`npm install @types/webpack -
 
 ## webpack开发工具链 ##
 * [webpack开发工具链](https://webpack.js.org/guides/get-started/)
+
+## webpack打包后调试 ##
+webpack打包后调试，需要在webpack.config.js中添加对应的[devtool节点](https://webpack.js.org/configuration/devtool/)，如：`devtool: 'cheap-module-source-map'`
 
 
