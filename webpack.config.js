@@ -48,11 +48,8 @@ module.exports = {
                             loader: 'async-import'
                         }
                     },
-                    // {
-                    //     loader: 'awesome-typescript-loader' 这个loader会提示require错误
-                    // },
                     {
-                        loader: 'ts-loader'
+                        loader: 'awesome-typescript-loader' //这个loader会提示require错误
                     },
                     {
                         loader: 'angular2-template-loader'
@@ -78,10 +75,11 @@ module.exports = {
      */
     plugins: [
         // Copy static assets to the build folder
+        // {from: "src/index.html", to: "index.html"},
+        // {context: 'src/app', from: "**/*.html", to: "app"}  ==复制src/app目录下所有的.html文件
         new CopyWebpackPlugin([
-            {from: 'src/assets', to: 'assets'},
-            {from: "src/index.html", to: "index.html"},
-            {context: 'src/app', from: "**/*.html", to: "app"}])
+            {from: 'src/assets', to: 'assets'}
+        ])
     ]
 }
 ;

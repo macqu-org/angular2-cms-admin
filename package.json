@@ -29,6 +29,7 @@
     "webpack": "webpack"
   },
   "devDependencies": {
+    "@types/webpack": "^2.2.11",
     "angular2-template-loader": "^0.6.2",
     "async-import": "^1.0.1",
     "awesome-typescript-loader": "^3.1.2",
