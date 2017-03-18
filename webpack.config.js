@@ -60,10 +60,10 @@ module.exports = {
      * See: http://webpack.github.io/docs/configuration.html#plugins
      */
     plugins: [
-        // Copy static assets to the build folder
-        new CopyWebpackPlugin([{from: 'src/assets', to: 'assets'}]),
-        // Generate the index.html
-        new HtmlWebpackPlugin({template: 'src/index.html'})
+        // Copy static assets to the build folder 拷贝app下所有的html文件
+        new CopyWebpackPlugin([{from: 'src/assets', to: 'assets'}, {from: "src/index.html", to: "index.html"}])
+        // Generate the index.html 把这些文件塞进入口页面
+        //new HtmlWebpackPlugin({template: 'src/index.html'})
     ]
 }
 ;
