@@ -75,10 +75,11 @@ module.exports = {
      */
     plugins: [
         // Copy static assets to the build folder
-        // {from: "src/index.html", to: "index.html"},
-        // {context: 'src/app', from: "**/*.html", to: "app"}  ==复制src/app目录下所有的.html文件
+        // 复制src/app目录下所有的.html文件
+        // {context: 'src/app', from: "**/*.html", to: "app"}
         new CopyWebpackPlugin([
-            {from: 'src/assets', to: 'assets'}
+            {from: 'src/assets', to: 'assets'},
+            {from: "src/index.html", to: "index.html"}
         ])
     ]
 }
