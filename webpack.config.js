@@ -20,7 +20,7 @@ module.exports = {
          *
          * See: http://webpack.github.io/docs/configuration.html#resolve-extensions
          */
-        extensions: ['.ts', '.js', '.css', '.scss']
+        extensions: ['.ts', '.js', '.css', '.scss', '.json']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -38,11 +38,36 @@ module.exports = {
      * See: http://webpack.github.io/docs/configuration.html#module
      */
     module: {
-        loaders: [
-            // Support for .ts files
+        rules: [
             {
-                test: /\.tsx?$/,
-                loader: 'ts-loader'
+                test: /\.ts$/,
+                use: [
+                    { // MAKE SURE TO CHAIN VANILLA JS CODE, I.E. TS COMPILATION OUTPUT.
+                        loader: 'ng-router-loader',
+                        options: {
+                            loader: 'async-import'
+                        }
+                    },
+                    // {
+                    //     loader: 'awesome-typescript-loader' 这个loader会提示require错误
+                    // },
+                    {
+                        loader: 'ts-loader'
+                    },
+                    {
+                        loader: 'angular2-template-loader'
+                    }
+                ]
+            },
+
+            /* Raw loader support for *.html
+             * Returns file content as string
+             *
+             * See: https://github.com/webpack/raw-loader
+             */
+            {
+                test: /\.(html|css)$/,
+                use: 'raw-loader'
             }
         ]
     },

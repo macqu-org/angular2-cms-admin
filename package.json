@@ -29,7 +29,13 @@
     "webpack": "webpack"
   },
   "devDependencies": {
+    "angular2-template-loader": "^0.6.2",
+    "async-import": "^1.0.1",
+    "awesome-typescript-loader": "^3.1.2",
     "copy-webpack-plugin": "^4.0.1",
+    "ng-router-loader": "^2.1.0",
+    "plugin-typescript": "^7.0.6",
+    "raw-loader": "^0.5.1",
     "ts-loader": "^2.0.2",
     "typescript": "~2.0.10",
     "webpack": "^2.2.1"

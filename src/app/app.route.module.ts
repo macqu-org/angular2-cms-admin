@@ -6,11 +6,11 @@ import {Routes, RouterModule} from "@angular/router";
 const routes: Routes = [
     {
         path: 'home',
-        loadChildren: 'app/pages/home/home.module#HomeModule'
+        loadChildren: './pages/home/home.module#HomeModule'
     },
     {
         path: 'about',
-        loadChildren: 'app/pages/about/about.module#AboutModule'
+        loadChildren: './pages/about/about.module#AboutModule'
     },
     {
         path: '',
@@ -19,7 +19,7 @@ const routes: Routes = [
     },
     {
         path: '**',
-        loadChildren: 'app/pages/home/home.module#HomeModule'
+        loadChildren: './pages/home/home.module#HomeModule'
     }
 ];
 

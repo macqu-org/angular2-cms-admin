@@ -4,14 +4,13 @@
  */
 (function (global) {
     System.config({
-        baseURL: '/web',
         paths: {
             // paths serve as alias
-            'npm:': 'node_modules/'
+            'npm:': '/node_modules/'
         },
         // map tells the System loader where to look for things
         map: {
-            // our app is within the app folder ==> load path: /web/module/
+            // our app is within the src folder
             app: 'app',
             // angular bundles
             '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
@@ -26,14 +25,16 @@
             // other libraries
             rxjs: 'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-            'ng-sidebar': 'npm:ng-sidebar',
             '@ng-bootstrap/ng-bootstrap': 'npm:@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
-            'lodash': 'npm:lodash'
+            'lodash': 'npm:lodash',
+            "ts": "npm:plugin-typescript/lib",
+            "typescript": "npm:typescript"
         },
+        transpiler: 'ts',
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
             app: {
-                defaultExtension: 'js'
+                defaultExtension: 'ts'
             },
             rxjs: {
                 main: './Rx',
@@ -43,9 +44,16 @@
                 defaultExtension: 'js'
 
             },
-            'ng-sidebar': {
-                main: 'lib/index',
-                defaultExtension: 'js'
+            "ts": {
+                "main": "plugin.js"
+            },
+            "typescript": {
+                "main": "lib/typescript.js",
+                "meta": {
+                    "lib/typescript.js": {
+                        "exports": "ts"
+                    }
+                }
             }
         }
     });

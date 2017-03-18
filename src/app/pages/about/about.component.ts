@@ -2,7 +2,7 @@
 
 @Component({
     selector: 'about-page',
-    templateUrl: './app/pages/about/about.component.html'
+    templateUrl: './about.component.html'
 })
 
 export class AboutPageComponent {
