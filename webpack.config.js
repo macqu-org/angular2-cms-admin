@@ -143,7 +143,12 @@ module.exports = {
             // The (\\|\/) piece accounts for path separators in *nix and Windows
             /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
             helpers.root('src') // location of your src
-        )
+        ),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
     ]
 }
 ;
