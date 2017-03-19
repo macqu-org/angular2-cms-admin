@@ -12,6 +12,7 @@ import {BaMenu} from "./components/baMenu/baMenu.component";
 import {BaMenuItem} from "./components/baMenu/components/baMenuItem/baMenuItem.component";
 import {BaScrollPosition} from "./directives/baScrollPosition.directive";
 import {BaSlimScroll} from "./directives/baSlimScroll.directive";
+import {RouterModule} from "@angular/router";
 
 const NGA_COMPONENTS = [
     BaSidebar,
@@ -34,7 +35,7 @@ const NGA_SERVICES: any[] = [
 
 @NgModule({
     declarations: [...NGA_DIRECTIVES, ...NGA_COMPONENTS],
-    imports: [CommonModule],
+    imports: [CommonModule,RouterModule],
     exports: [...NGA_DIRECTIVES, ...NGA_COMPONENTS]
 })
 
