@@ -5,9 +5,6 @@ import {Subscription} from 'rxjs/Rx';
 import {BaMenuService} from '../../services';
 import {GlobalState} from '../../../app.global.state';
 
-import 'jquery';
-declare var jQuery: any;
-
 import 'style-loader!./baMenu.scss';
 
 @Component({

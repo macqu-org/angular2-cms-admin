@@ -1,22 +1,22 @@
-import {Directive, HostBinding, OnInit} from "@angular/core";
-import {BaThemeConfigProvider,isMobile} from '../../theme';
+import {Directive, HostBinding, OnInit} from '@angular/core';
+import {BaThemeConfigProvider} from "../theme.configProvider";
+import {isMobile} from "../theme.constants";
+
 
 @Directive({
     selector: '[baThemeRun]'
 })
+export class BaThemeRun implements OnInit{
 
-export class BaThemeRun implements OnInit {
+    private _classes:Array<string> = [];
+    @HostBinding('class') classesString:string;
 
-    private _classes: Array<string> = [];
-
-    @HostBinding('class') classesString: string;
-
-    constructor(private _baConfig: BaThemeConfigProvider) {
-
+    constructor(private _baConfig:BaThemeConfigProvider) {
     }
 
-    public ngOnInit(): void {
-
+    public ngOnInit():void {
+        this._assignTheme();
+        this._assignMobile();
     }
 
     private _assignTheme():void {
@@ -29,9 +29,8 @@ export class BaThemeRun implements OnInit {
         }
     }
 
-    private _addClass(cls: string) {
+    private _addClass(cls:string) {
         this._classes.push(cls);
         this.classesString = this._classes.join(' ');
     }
-
 }

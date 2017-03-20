@@ -11,7 +11,7 @@ import {layoutPaths} from "./theme/theme.constants";
     templateUrl: './app.component.html'
 })
 export class AppComponent {
-    isMenuCollapsed: boolean = false;
+    public isMenuCollapsed: boolean = false;
 
     constructor(private _state: GlobalState,
                 private _imageLoader: BaImageLoaderService,

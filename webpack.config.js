@@ -75,6 +75,11 @@ module.exports = {
                 ]
             },
 
+            {
+                test: /bootstrap\/dist\/js\/umd\//,
+                use: 'imports-loader?jQuery=jquery'
+            },
+
             /* Raw loader support for *.html
              * Returns file content as string
              *
@@ -133,17 +138,27 @@ module.exports = {
             {from: "src/index.html", to: "index.html"}
         ]),
         /**
+         *
+         * 这个插件可以解决webpack编译时的warning提示信息：critical-dependencies的警告，
+         * 这个警告解决可以参考地址：https://webpack.github.io/docs/context.html#critical-dependencies
          * Plugin: ContextReplacementPlugin
          * Description: Provides context to Angular's use of System.import
          *
          * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
          * See: https://github.com/angular/angular/issues/11580
+         *
          */
         new ContextReplacementPlugin(
             // The (\\|\/) piece accounts for path separators in *nix and Windows
             /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
             helpers.root('src') // location of your src
         ),
+        /**
+         *
+         * 1. 使用webpack来加载jquery,想在js中用$，需要将$与jQuery对应起来
+         * 2. 使用npm install @type/jquery --save-dev 来安装jquery的typescript的类型声明文件
+         * 3. 如果某个ts文件中需要用到jquery的插件，直接在文件中通过import '插件名' 来导入，不要在这里添加对应
+         * */
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",

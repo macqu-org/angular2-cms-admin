@@ -1,8 +1,5 @@
 import {Directive, Input, Output, ElementRef, EventEmitter, OnChanges} from '@angular/core';
 
-import 'jquery';
-declare var jQuery: any;
-
 import 'jquery-slimscroll';
 
 @Directive({
