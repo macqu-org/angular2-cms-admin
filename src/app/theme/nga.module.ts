@@ -13,11 +13,13 @@ import {BaMenuItem} from "./components/baMenu/components/baMenuItem/baMenuItem.c
 import {BaScrollPosition} from "./directives/baScrollPosition.directive";
 import {BaSlimScroll} from "./directives/baSlimScroll.directive";
 import {RouterModule} from "@angular/router";
+import {BaPageTop} from "./components/baPageTop/baPageTop.component";
 
 const NGA_COMPONENTS = [
     BaSidebar,
     BaMenu,
-    BaMenuItem
+    BaMenuItem,
+    BaPageTop
 ];
 
 const NGA_DIRECTIVES = [
