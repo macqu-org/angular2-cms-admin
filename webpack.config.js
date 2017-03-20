@@ -1,9 +1,13 @@
 var path = require('path');
 var webpack = require('webpack');
 const helpers = require('./config/helpers');
+
+//webpack打包时所需要的插件
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const AssetsPlugin = require('assets-webpack-plugin');
 
 
 module.exports = {
@@ -74,21 +78,6 @@ module.exports = {
                     }
                 ]
             },
-
-            {
-                test: /bootstrap\/dist\/js\/umd\//,
-                use: 'imports-loader?jQuery=jquery'
-            },
-
-            /* Raw loader support for *.html
-             * Returns file content as string
-             *
-             * See: https://github.com/webpack/raw-loader
-             */
-            {
-                test: /\.(html|css)$/,
-                use: 'raw-loader'
-            },
             /*
              * to string and css loader support for *.css files (from Angular components)
              * Returns file content as string
@@ -120,6 +109,25 @@ module.exports = {
             {
                 test: /\.(ttf|eot|svg)(\?v=.+)?$/,
                 use: 'file-loader'
+            },
+            {
+                test: /bootstrap\/dist\/js\/umd\//,
+                use: 'imports-loader?jQuery=jquery'
+            },
+            /* Raw loader support for *.html
+             * Returns file content as string
+             *
+             * See: https://github.com/webpack/raw-loader
+             */
+            {
+                test: /\.(html)$/,
+                use: 'raw-loader'
+            },
+            /* File loader for supporting images, for example, in CSS files.
+             */
+            {
+                test: /\.(jpg|png|gif)$/,
+                use: 'file-loader'
             }
         ]
     },
@@ -130,6 +138,24 @@ module.exports = {
      */
     plugins: [
         new ExtractTextPlugin({filename: 'initial.css', allChunks: true}),
+        /**
+         *
+         * webpack默认会将js文件名做hash处理，把正常的文件名变成hash值的文件名，这个插件可以将这些hash值转成正常的文件名，
+         * 同时生成webpack-assets.json文件，便于查找打包或静态文件的位置
+         * */
+        new AssetsPlugin({
+            path: helpers.root('dist'),
+            filename: 'webpack-assets.json',
+            prettyPrint: true
+        }),
+        /*
+         * 提供webpack的打包速度
+         * Plugin: ForkCheckerPlugin
+         * Description: Do type checking in a separate process, so webpack don't need to wait.
+         *
+         * See: https://github.com/s-panferov/awesome-typescript-loader#forkchecker-boolean-defaultfalse
+         */
+        new CheckerPlugin(),
         // Copy static assets to the build folder
         // 复制src/app目录下所有的.html文件
         // {context: 'src/app', from: "**/*.html", to: "app"}
