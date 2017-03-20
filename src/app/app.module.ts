@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {NgModule, enableProdMode} from '@angular/core';
+import {BrowserModule, disableDebugTools} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app.routing';
@@ -11,6 +11,10 @@ import {GlobalState} from "./app.global.state";
 const APP_PROVIDERS = [
     GlobalState
 ];
+
+// 部署生成环境时angular2需要启用的配置
+//disableDebugTools();
+//enableProdMode();
 
 @NgModule({
     imports: [BrowserModule, NgaModule.forRoot(), PagesModule, AppRoutingModule],
