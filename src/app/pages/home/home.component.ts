@@ -1,4 +1,4 @@
-﻿import {Component, Output, EventEmitter} from '@angular/core';
+﻿import {Component} from '@angular/core';
 
 @Component({
     selector: 'home-page',
@@ -6,16 +6,5 @@
 })
 
 export class HomePageComponent {
-    @Output() onChildHideSideBar = new EventEmitter<boolean>();
 
-    private isShowSiderBar: boolean = true;
-
-    constructor() {
-
-    }
-
-    childHideSideBar() {
-        this.isShowSiderBar = !this.isShowSiderBar;
-        this.onChildHideSideBar.emit(this.isShowSiderBar);
-    }
 }
