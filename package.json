@@ -28,7 +28,9 @@
     "zone.js": "^0.7.4"
   },
   "scripts": {
-    "webpack": "webpack --progress --colors --watch"
+    "start": "npm run webpack:dev",
+    "webpack:dev": "webpack --config config/webpack.dev.js --progress --colors --watch",
+    "webpack:prod": "webpack --config config/webpack.prod.js --progress --colors --watch"
   },
   "devDependencies": {
     "@types/jquery": "^2.0.41",

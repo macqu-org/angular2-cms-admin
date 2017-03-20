@@ -3,10 +3,10 @@ export const PAGES_MENU = [
         path: 'pages',
         children: [
             {
-                path: 'dashboard',
+                path: 'news',
                 data: {
                     menu: {
-                        title: 'Dashboard',
+                        title: '头条管理',
                         icon: 'ion-android-home',
                         selected: false,
                         expanded: false,
@@ -15,10 +15,10 @@ export const PAGES_MENU = [
                 }
             },
             {
-                path: 'editors',
+                path: 'forum',
                 data: {
                     menu: {
-                        title: 'Editors',
+                        title: '社区管理',
                         icon: 'ion-edit',
                         selected: false,
                         expanded: false,
@@ -27,248 +27,106 @@ export const PAGES_MENU = [
                 },
                 children: [
                     {
-                        path: 'ckeditor',
+                        path: 'users',
                         data: {
                             menu: {
-                                title: 'CKEditor',
+                                title: '用户管理',
+                            }
+                        }
+                    },
+                    {
+                        path: 'comments',
+                        data: {
+                            menu: {
+                                title: '评论管理',
                             }
                         }
                     }
                 ]
             },
             {
-                path: 'components',
+                path: 'push',
                 data: {
                     menu: {
-                        title: 'Components',
+                        title: 'Push管理',
                         icon: 'ion-gear-a',
                         selected: false,
                         expanded: false,
                         order: 250,
                     }
-                },
-                children: [
-                    {
-                        path: 'treeview',
-                        data: {
-                            menu: {
-                                title: 'Tree View',
-                            }
-                        }
-                    }
-                ]
+                }
             },
             {
-                path: 'charts',
+                path: 'statistics',
                 data: {
                     menu: {
-                        title: 'Charts',
+                        title: '数据统计',
                         icon: 'ion-stats-bars',
                         selected: false,
                         expanded: false,
                         order: 200,
                     }
-                },
-                children: [
-                    {
-                        path: 'chartist-js',
-                        data: {
-                            menu: {
-                                title: 'Chartist.Js',
-                            }
-                        }
-                    }
-                ]
+                }
             },
             {
-                path: 'ui',
+                path: 'feedback',
                 data: {
                     menu: {
-                        title: 'UI Features',
+                        title: '意见反馈',
                         icon: 'ion-android-laptop',
                         selected: false,
                         expanded: false,
                         order: 300,
                     }
-                },
-                children: [
-                    {
-                        path: 'typography',
-                        data: {
-                            menu: {
-                                title: 'Typography',
-                            }
-                        }
-                    },
-                    {
-                        path: 'buttons',
-                        data: {
-                            menu: {
-                                title: 'Buttons',
-                            }
-                        }
-                    },
-                    {
-                        path: 'icons',
-                        data: {
-                            menu: {
-                                title: 'Icons',
-                            }
-                        }
-                    },
-                    {
-                        path: 'modals',
-                        data: {
-                            menu: {
-                                title: 'Modals',
-                            }
-                        }
-                    },
-                    {
-                        path: 'grid',
-                        data: {
-                            menu: {
-                                title: 'Grid',
-                            }
-                        }
-                    },
-                ]
+                }
             },
             {
-                path: 'forms',
+                path: 'materials',
                 data: {
                     menu: {
-                        title: 'Form Elements',
+                        title: '素材管理',
                         icon: 'ion-compose',
                         selected: false,
                         expanded: false,
                         order: 400,
                     }
-                },
-                children: [
-                    {
-                        path: 'inputs',
-                        data: {
-                            menu: {
-                                title: 'Form Inputs',
-                            }
-                        }
-                    },
-                    {
-                        path: 'layouts',
-                        data: {
-                            menu: {
-                                title: 'Form Layouts',
-                            }
-                        }
-                    }
-                ]
+                }
             },
             {
-                path: 'tables',
+                path: 'orders',
                 data: {
                     menu: {
-                        title: 'Tables',
+                        title: '订单管理',
                         icon: 'ion-grid',
                         selected: false,
                         expanded: false,
                         order: 500,
                     }
-                },
-                children: [
-                    {
-                        path: 'basictables',
-                        data: {
-                            menu: {
-                                title: 'Basic Tables',
-                            }
-                        }
-                    },
-                    {
-                        path: 'smarttables',
-                        data: {
-                            menu: {
-                                title: 'Smart Tables',
-                            }
-                        }
-                    }
-                ]
+                }
             },
             {
-                path: 'maps',
+                path: 'publictest',
                 data: {
                     menu: {
-                        title: 'Maps',
+                        title: '众测管理',
                         icon: 'ion-ios-location-outline',
                         selected: false,
                         expanded: false,
                         order: 600,
                     }
-                },
-                children: [
-                    {
-                        path: 'googlemaps',
-                        data: {
-                            menu: {
-                                title: 'Google Maps',
-                            }
-                        }
-                    },
-                    {
-                        path: 'leafletmaps',
-                        data: {
-                            menu: {
-                                title: 'Leaflet Maps',
-                            }
-                        }
-                    },
-                    {
-                        path: 'bubblemaps',
-                        data: {
-                            menu: {
-                                title: 'Bubble Maps',
-                            }
-                        }
-                    },
-                    {
-                        path: 'linemaps',
-                        data: {
-                            menu: {
-                                title: 'Line Maps',
-                            }
-                        }
-                    }
-                ]
+                }
             },
             {
-                path: '',
+                path: 'activities',
                 data: {
                     menu: {
-                        title: 'Pages',
+                        title: '活动管理',
                         icon: 'ion-document',
                         selected: false,
                         expanded: false,
                         order: 650,
                     }
-                },
-                children: [
-                    {
-                        path: ['/login'],
-                        data: {
-                            menu: {
-                                title: 'Login'
-                            }
-                        }
-                    },
-                    {
-                        path: ['/register'],
-                        data: {
-                            menu: {
-                                title: 'Register'
-                            }
-                        }
-                    }
-                ]
+                }
             },
             {
                 path: '',
@@ -318,7 +176,7 @@ export const PAGES_MENU = [
                 data: {
                     menu: {
                         title: 'External Link',
-                        url: 'http://akveo.com',
+                        url: '#',
                         icon: 'ion-android-exit',
                         order: 800,
                         target: '_blank'
