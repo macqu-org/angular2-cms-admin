@@ -5,7 +5,7 @@ import {PAGES_MENU} from "./pages.menu";
 
 @Component({
     selector: 'pages',
-    templateUrl: './pages.component.html'
+    templateUrl: 'app/pages/pages.component.html'
 })
 
 export class Pages implements OnInit {

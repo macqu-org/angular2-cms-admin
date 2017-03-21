@@ -81,10 +81,14 @@ module.exports = function (options) {
                         },
                         {
                             loader: 'awesome-typescript-loader'
-                        },
-                        {
-                            loader: 'angular2-template-loader'
                         }
+                        // /**
+                        //  *
+                        //  * angular2 组件模板处理插件
+                        //  * */
+                        // {
+                        //     loader: 'angular2-template-loader'
+                        // }
                     ]
                 },
                 /*
@@ -170,7 +174,8 @@ module.exports = function (options) {
             // {context: 'src/app', from: "**/*.html", to: "app"}
             new CopyWebpackPlugin([
                 {from: 'src/assets', to: 'assets'},
-                {from: "src/index.html", to: "index.html"}
+                {from: "src/index.html", to: "index.html"},
+                {context: 'src/app', from: "**/*.html", to: "app"}
             ]),
             /**
              *

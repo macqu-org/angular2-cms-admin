@@ -9,7 +9,7 @@ import 'style-loader!./baMenu.scss';
 
 @Component({
     selector: 'ba-menu',
-    templateUrl: './baMenu.html'
+    templateUrl: 'app/theme/components/baMenu/baMenu.html'
 })
 export class BaMenu {
 

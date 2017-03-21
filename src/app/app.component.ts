@@ -11,7 +11,7 @@ import 'style-loader!./theme/initial.scss';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html'
+    templateUrl: 'app/app.component.html'
 })
 export class AppComponent {
     public isMenuCollapsed: boolean = false;

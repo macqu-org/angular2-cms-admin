@@ -1,2 +1,43 @@
-# angular2-cms-admin
-a cms management system template.
+项目说明
+====================
+
+* [安装](#启动ng2项目)
+* [开发备注](#备注)
+
+
+# 启动ng2项目 #
+1. 安装依赖
+```
+npm install 
+```
+2. 启动项目(开发模式)
+```
+npm run webpack:dev
+```
+
+# 备注 #
+* 当前组件是通过绝对绝对路径来加载模板文件的，因为程序目前需要调用asp.net mvc中的action作为模板内容来显示
+* 如果需要启用组件模板的相对路径，需要进行如下设置：
+    + 启用angular2-template-loader
+        ```
+        // /**
+        //  *
+        //  * angular2 组件模板处理插件
+        //  * */
+        // 取消下面代码前面的注释
+        {
+            loader: 'angular2-template-loader'
+        }
+        ```
+    + 取消复制src下所有的html文件到dist目录下
+        ```
+        // Copy static assets to the build folder
+        // 复制src/app目录下所有的.html文件
+        // {context: 'src/app', from: "**/*.html", to: "app"}
+        new CopyWebpackPlugin([
+            {from: 'src/assets', to: 'assets'},
+            {from: "src/index.html", to: "index.html"},
+            //注释掉下面的代码
+            //{context: 'src/app', from: "**/*.html", to: "app"}
+        ]),
+        ```

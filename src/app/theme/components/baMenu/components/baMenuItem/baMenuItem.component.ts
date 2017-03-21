@@ -4,7 +4,7 @@ import 'style-loader!./baMenuItem.scss';
 
 @Component({
     selector: 'ba-menu-item',
-    templateUrl: './baMenuItem.html'
+    templateUrl: 'app/theme/components/baMenu/components/baMenuItem/baMenuItem.html'
 })
 export class BaMenuItem {
 

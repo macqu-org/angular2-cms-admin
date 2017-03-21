@@ -6,7 +6,7 @@ import 'style-loader!./baSidebar.scss';
 
 @Component({
     selector: 'ba-sidebar',
-    templateUrl: './baSidebar.html'
+    templateUrl: 'app/theme/components/baSidebar/baSidebar.html'
 })
 
 export class BaSidebar implements OnInit,AfterViewInit {

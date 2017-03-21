@@ -5,7 +5,7 @@ import {GlobalState} from "../../../app.global.state";
 
 @Component({
   selector: 'ba-page-top',
-  templateUrl: './baPageTop.html',
+  templateUrl: 'app/theme/components/baPageTop/baPageTop.html',
 })
 export class BaPageTop {
 
