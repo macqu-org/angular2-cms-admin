@@ -2,7 +2,8 @@
 ====================
 
 * [安装](#启动ng2项目)
-* [开发备注](#备注)
+* [项目配置](#备注)
+    + [组件模板路径采用的是绝对路径](##模板路径设置)
 
 
 # 启动ng2项目 #
@@ -14,8 +15,8 @@ npm install
 ```
 npm run webpack:dev
 ```
-
 # 备注 #
+## 模板路径设置 ##
 * 当前组件是通过绝对绝对路径来加载模板文件的，因为程序目前需要调用asp.net mvc中的action作为模板内容来显示
 * 如果需要启用组件模板的相对路径，需要进行如下设置：
     + 启用angular2-template-loader
@@ -41,3 +42,4 @@ npm run webpack:dev
             //{context: 'src/app', from: "**/*.html", to: "app"}
         ]),
         ```
+    + 为什么需要改成绝对路径来加载组件模板，[参考文章地址](http://stackoverflow.com/questions/40179955/templateurl-in-angular2-component-not-loading-url)
