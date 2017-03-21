@@ -1,8 +1,7 @@
 import {Injectable} from "@angular/core";
 import {BehaviorSubject} from "rxjs";
 import {Router, Routes} from "@angular/router";
-import 'lodash';
-declare var _: any;
+import * as _ from "lodash";
 
 @Injectable()
 export class BaMenuService {
