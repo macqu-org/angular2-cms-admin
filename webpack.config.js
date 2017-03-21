@@ -7,7 +7,7 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const AssetsPlugin = require('assets-webpack-plugin');
+//const AssetsPlugin = require('assets-webpack-plugin');
 
 
 module.exports = function (options) {
@@ -152,11 +152,11 @@ module.exports = function (options) {
              * webpack默认会将js文件名做hash处理，把正常的文件名变成hash值的文件名，这个插件可以将这些hash值转成正常的文件名，
              * 同时生成webpack-assets.json文件，便于查找打包或静态文件的位置
              * */
-            new AssetsPlugin({
-                path: helpers.root('dist'),
-                filename: 'webpack-assets.json',
-                prettyPrint: true
-            }),
+            // new AssetsPlugin({
+            //     path: helpers.root('dist'),
+            //     filename: 'webpack-assets.json',
+            //     prettyPrint: true
+            // }),
             /*
              * 提供webpack的打包速度
              * Plugin: ForkCheckerPlugin
