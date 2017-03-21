@@ -30,6 +30,18 @@ npm run webpack:dev
             loader: 'angular2-template-loader'
         }
         ```
+    + 启用 raw-loader 来加载html
+    ```
+    /* Raw loader support for *.html
+    * Returns file content as string
+    *
+    * See: https://github.com/webpack/raw-loader
+    */
+    {
+       test: /\.html$/,
+       use: 'raw-loader'
+    },
+    ```
     + 取消复制src下所有的html文件到dist目录下
         ```
         // Copy static assets to the build folder

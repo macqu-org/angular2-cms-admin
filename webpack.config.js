@@ -46,7 +46,7 @@ module.exports = function (options) {
         devtool: 'cheap-module-source-map',
         output: {
             //path: path.resolve(__dirname, 'dist'),
-            //这个是我自己的网站目录，需要根据实际情况决定
+            //这个是我自己本地的网站的开发根目录，需要根据实际情况决定
             path: webpackOutputPath,
             /**
              * Specifies the name of each output file on disk.
@@ -132,10 +132,10 @@ module.exports = function (options) {
                  *
                  * See: https://github.com/webpack/raw-loader
                  */
-                {
-                    test: /\.(html)$/,
-                    use: 'raw-loader'
-                },
+                // {
+                //     test: /\.html$/,
+                //     use: 'raw-loader'
+                // },
                 /* File loader for supporting images, for example, in CSS files.
                  */
                 {
