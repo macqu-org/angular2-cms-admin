@@ -8,8 +8,9 @@ const routes: Routes = [
         component: Pages,
         children: [
             {path: '', redirectTo: 'news', pathMatch: 'full'},
+            {path: 'news', loadChildren: './news/news.module#NewsModule?'},
+            {path: 'forum', loadChildren: './forum/forum.module#ForumModule'},
             {path: '**', redirectTo: 'news'},
-            {path: 'news', loadChildren: './news/news.module#NewsModule'}
         ]
     }
 ];

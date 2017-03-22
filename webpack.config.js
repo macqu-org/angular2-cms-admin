@@ -76,7 +76,7 @@ module.exports = function (options) {
                         { // MAKE SURE TO CHAIN VANILLA JS CODE, I.E. TS COMPILATION OUTPUT.
                             loader: 'ng-router-loader',
                             options: {
-                                loader: 'async-import'
+                                loader: 'async-require' //https://shlomiassaf.github.io/ng-router-loader/globals.html#built_in_loaders
                             }
                         },
                         {
