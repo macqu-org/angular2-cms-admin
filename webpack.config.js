@@ -11,10 +11,14 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = function (options) {
+    var currentWorkDir = process.cwd();
+    var workDirObject = path.parse(currentWorkDir);
+    //开发环境生成文件路径
     var devPath = path.format({
-        root: 'e:',
-        dir: 'E:\\gitsource\\YiCheAppSource\\sources\\YiCheAppCms\\YiChe.App.CmsWeb\\dist'
+        root: workDirObject.root,
+        dir: path.resolve(currentWorkDir.replace('YiChe.App.CmsWeb-Ng2', ''), 'YiChe.App.CmsWeb', 'dist')
     });
+    //正式部署时生成文件路径，需要更加实际情况调整
     var prodPath = path.resolve(__dirname, 'dist');
     var webpackOutputPath = options.env == 'dev' ? devPath : prodPath;
     return {
