@@ -41,3 +41,6 @@ jspm_packages
 
 #DIST#
 /dist
+
+.SyncFolders History/
+Syncfolders_Database_db
